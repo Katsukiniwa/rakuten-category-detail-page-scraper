@@ -18,10 +18,10 @@ await Actor.init();
 
 const startUrls = ['https://apify.com'];
 
-const proxyConfiguration = await Actor.createProxyConfiguration();
+// const proxyConfiguration = await Actor.createProxyConfiguration();
 
 const crawler = new PuppeteerCrawler({
-    proxyConfiguration,
+    // proxyConfiguration,
     requestHandler: router,
 });
 

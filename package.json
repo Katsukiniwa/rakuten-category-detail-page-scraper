@@ -9,6 +9,7 @@
     "dependencies": {
         "apify": "^3.1.10",
         "crawlee": "^3.5.4",
+        "got-scraping": "^3.2.15",
         "puppeteer": "*"
     },
     "devDependencies": {
