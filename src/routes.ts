@@ -21,7 +21,7 @@ router.addHandler('DETAIL', async ({ request, page, log }) => {
 
     log.debug(`Saving data: ${request.url}`)
     console.dir(results);
-    // await Dataset.pushData(results);
+    await Dataset.pushData(results);
 });
 
 // This is a fallback route which will handle the start URL
