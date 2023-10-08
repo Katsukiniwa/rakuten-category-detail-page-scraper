@@ -7,7 +7,7 @@
 // For more information, see https://docs.apify.com/sdk/js
 import { Actor } from 'apify';
 // For more information, see https://crawlee.dev
-import { PuppeteerCrawler } from 'crawlee';
+import { PlaywrightCrawler } from 'crawlee';
 // this is ESM project, and as such, it requires you to specify extensions in your relative imports
 // read more about this here: https://nodejs.org/docs/latest-v18.x/api/esm.html#mandatory-file-extensions
 // note that we need to use `.js` even when inside TS files
@@ -16,13 +16,14 @@ import { router } from './routes.js';
 // Initialize the Apify SDK
 await Actor.init();
 
-const startUrls = ['https://apify.com'];
+const startUrls = ['https://apify.com/store'];
 
 // const proxyConfiguration = await Actor.createProxyConfiguration();
 
-const crawler = new PuppeteerCrawler({
+const crawler = new PlaywrightCrawler({
     // proxyConfiguration,
     requestHandler: router,
+    maxRequestsPerCrawl: 50,
 });
 
 await crawler.run(startUrls);
