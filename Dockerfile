@@ -8,7 +8,8 @@ FROM apify/actor-node-puppeteer-chrome:18 AS builder
 COPY --chown=myuser package*.json ./
 
 # Install all dependencies. Don't audit to speed up the installation.
-RUN npm install --include=dev --audit=false
+# RUN npm install --include=dev --audit=false
+RUN npm install
 
 # Next, copy the source files using the user set
 # in the base image.
