@@ -11,7 +11,8 @@
         "cheerio": "^1.0.0-rc.12",
         "crawlee": "^3.5.4",
         "got-scraping": "^3.2.15",
-        "puppeteer": "*"
+        "puppeteer": "*",
+        "playwright": "*"
     },
     "devDependencies": {
         "@apify/eslint-config-ts": "^0.3.0",
